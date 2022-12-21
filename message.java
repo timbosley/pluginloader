@@ -2,7 +2,7 @@
 
 
 
-class hello implements Runnable {
+class message implements Runnable {
 final private String space = " ";
 
 	public void run() {

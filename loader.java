@@ -49,9 +49,9 @@ final private static String wdir = System.getProperty("user.dir");
 		Arrays.sort(files, ord);
 		for (String filename : files) {
 			try {
-				String[] klassname = filename.split("[.]", 2);
+				String klassname = filename.replace(".class", "");
 
-				Class<?> klass = ClassLoader.getSystemClassLoader().loadClass(klassname[0]);
+				Class<?> klass = Class.forName(klassname);
 					try {
 						Runnable rable = (Runnable)klass.newInstance();
 						if (rable instanceof Runnable) {
@@ -65,7 +65,7 @@ final private static String wdir = System.getProperty("user.dir");
 						System.out.println(I.toString());
 					}
 					catch (ClassCastException C) {
-						System.out.println(klassname[0]);
+						System.out.println(klassname);
 						System.out.println(C.toString());
 					}
 
