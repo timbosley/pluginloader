@@ -1,8 +1,8 @@
+package patches.morepatches;
 
 
 
-
-class message implements Runnable {
+public class message implements Runnable {
 final private String space = " ";
 
 	public void run() {

@@ -1,8 +1,8 @@
+package patches;
 
 
 
-
-class hello implements Runnable {
+public class hello implements Runnable {
 final private String space = " ";
 
 	public void run() {
